@@ -1,6 +1,16 @@
+using EventAssos.Api.Extensions;
+using EventAssos.Security.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
+builder.Services.AddSecurityServices(builder.Configuration);
+
+builder.Services.ConfigureJwTAuthentication(builder.Configuration);
+
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -18,6 +28,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseAuthentication();
 app.MapControllers();
 
 app.Run();

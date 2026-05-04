@@ -4,6 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>0c6c4cd5-8cd1-4591-95ad-495dec0301b2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +21,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Dtos\" />
     <Folder Include="Mappers\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <ItemGroup>
