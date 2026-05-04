@@ -1,0 +1,36 @@
+﻿using EventAssos.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace EventAssos.Infrastructure.Database.Configuration
+{
+    internal class InscriptionConfig : IEntityTypeConfiguration<Inscription>
+    {
+        public void Configure(EntityTypeBuilder<Inscription> builder)
+        {
+            builder.HasKey(i => new { i.UserId, i.EventId });
+
+
+            builder.Property(i => i.Status)
+                .IsRequired();
+
+            builder.Property(i => i.DateInscription)
+                .IsRequired();
+
+
+            builder.HasOne(i => i.User)
+                   .WithMany(u => u.Inscriptions)
+                   .HasForeignKey(i => i.UserId)
+                   .OnDelete(DeleteBehavior.Restrict); ;
+
+
+            builder.HasOne(i => i.Event)
+                   .WithMany(e => e.Inscriptions)
+                   .HasForeignKey(i => i.EventId)
+                   .OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+}
