@@ -3,5 +3,5 @@
   <Project Path="EventAssos.Core/EventAssos.Core.csproj" Id="dce17495-b35d-4c11-8f7c-b50ef9f48a3f" />
   <Project Path="EventAssos.Domain/EventAssos.Domain.csproj" Id="1d3d842f-606c-4586-a8a7-f1ef000fac91" />
   <Project Path="EventAssos.Infrastructure/EventAssos.Infrastructure.csproj" Id="3b1c3c71-58fd-446d-aaec-0cea7c424f6f" />
-  <Project Path="EventAssos.Secturity/EventAssos.Secturity.csproj" Id="be0f9e12-f504-4a71-933c-d651af588c0e" />
+  <Project Path="EventAssos.Secturity/EventAssos.Security.csproj" Id="be0f9e12-f504-4a71-933c-d651af588c0e" />
 </Solution>

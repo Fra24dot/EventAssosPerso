@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EventAssos.Core\EventAssos.Core.csproj" />
-    <ProjectReference Include="..\EventAssos.Secturity\EventAssos.Secturity.csproj" />
+    <ProjectReference Include="..\EventAssos.Secturity\EventAssos.Security.csproj" />
   </ItemGroup>
 
 </Project>
