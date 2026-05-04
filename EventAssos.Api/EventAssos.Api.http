@@ -1,0 +1,6 @@
+@EventAssos.Api_HostAddress = http://localhost:5249
+
+GET {{EventAssos.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
