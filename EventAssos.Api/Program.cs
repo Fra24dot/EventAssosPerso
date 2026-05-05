@@ -1,9 +1,8 @@
 using EventAssos.Api.Extensions;
 using EventAssos.Security.Extensions;
+using EventAssos.Security.Services.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 // Add services to the container.
 builder.Services.AddSecurityServices(builder.Configuration);
 

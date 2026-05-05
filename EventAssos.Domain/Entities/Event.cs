@@ -30,7 +30,7 @@ namespace EventAssos.Domain.Entities
         public Guid? CreatedByUserId { get; set; }
         public User? CreatedBy { get; set; }
         public ICollection<Inscription> Inscriptions { get; set; } = new List<Inscription>();
-        public ICollection<Category> Categories { get; set; } = new List<Categorie>();
+        public ICollection<Category> Categories { get; set; } = new List<Category>();
     }
 }
-}
+

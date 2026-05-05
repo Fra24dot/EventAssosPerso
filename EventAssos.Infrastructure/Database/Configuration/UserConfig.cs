@@ -52,7 +52,7 @@ namespace EventAssos.Infrastructure.Database.Configuration
                   Id = AdminId,
                   Pseudo = "MmeDupont",
                   Email = "dupont@admin.com",
-                  Password = "",
+                  Password = "1/cmKqS67O6WI/bjc6BKIklFI9YkiiVgLqooeeLsCwCkaE7s4QJNPDlks+3R8trv", 
                   Role = UserRole.Admin,
                   Birthdate = new DateOnly(1980, 5, 15),
 

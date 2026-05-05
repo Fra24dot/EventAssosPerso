@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EventAssos.Core.Services.Tools
+namespace EventAssos.Core.Interfaces.Services.Tools
 {
     public interface IJwtService
     {

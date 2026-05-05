@@ -1,4 +1,4 @@
-﻿using EventAssos.Core.Services.Tools;
+﻿using EventAssos.Core.Interfaces.Services.Tools;
 using EventAssos.Security.Services.Tools;
 using EventAssos.Security.Settings;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +21,7 @@ namespace EventAssos.Security.Extensions
 
             
             services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<IPasswordHacherService, PasswordHacherService>();
         }
     }
 }
