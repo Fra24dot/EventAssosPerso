@@ -16,6 +16,24 @@ namespace EventAssos.Security.Services.Auth
         IPasswordGeneratorService _passwordGeneratorService,
         IEmailService _emailService) : IAuthService
     {
+        public async Task<User> LoginAsync(string email, string password)
+        {
+      
+            var user = await _userRepository.GetByEmailAsync(email);
+            if (user == null)
+            {
+                throw new UnauthorizedAccessException("The email/password is not correct");
+            }
+
+            bool isPasswordOk = _passwordHacherService.VerifyPassword(password, user.Password);
+            if (!isPasswordOk)
+            {
+                throw new UnauthorizedAccessException("The email/password is not correct");
+            }
+            return user;
+        }
+        
+
         public async Task<User?> RegisterAsync(string email)
         {
             var userExisting = await _userRepository.GetByEmailAsync(email);
@@ -41,7 +59,7 @@ namespace EventAssos.Security.Services.Auth
 
             string subject = "Bienvenue - Votre mot de passe provisoire";
 
-            //Corps du message 
+            
             string body = $@"
             <html>
                 <body>

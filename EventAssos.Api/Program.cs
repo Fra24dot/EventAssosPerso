@@ -1,11 +1,15 @@
 using EventAssos.Api.Extensions;
+using EventAssos.Infrastructure.Extensions;
 using EventAssos.Security.Extensions;
+using EventAssos.Core.Extensions;
 using EventAssos.Security.Services.Tools;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSecurityServices(builder.Configuration);
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddCoreServices(builder.Configuration);
 
 builder.Services.ConfigureJwTAuthentication(builder.Configuration);
 
